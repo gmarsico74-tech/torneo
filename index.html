@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Torneo 3vs3 · Pallacanestro Castelfranco 1952</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap">
+<style>
+:root{--ground:#eef1f7;--surface:#fff;--surface2:#f6f8fc;--line:#d3dae8;--ink:#141a26;--ink2:#4d5a72;--ink3:#7d8aa3;--header:#12357e;--accent:#e8722b;--good:#1f7a4d;--r:12px;--sh:0 1px 2px rgba(18,53,126,.08),0 6px 20px rgba(18,53,126,.06)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#0d1220;--surface:#151c2c;--surface2:#1b2334;--line:#2a3448;--ink:#e9eefa;--ink2:#a7b3ca;--ink3:#7684a0;--header:#101a2c;--accent:#ff8a41;--good:#3fa877;--sh:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.28)}}
+:root[data-theme="dark"]{--ground:#0d1220;--surface:#151c2c;--surface2:#1b2334;--line:#2a3448;--ink:#e9eefa;--ink2:#a7b3ca;--ink3:#7684a0;--header:#101a2c;--accent:#ff8a41;--good:#3fa877;--sh:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.28)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:Barlow,system-ui,sans-serif;font-size:17px;line-height:1.45;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:"Barlow Condensed",Barlow,sans-serif;margin:0;letter-spacing:.02em;text-wrap:balance}
+.wrap{max-width:900px;margin:0 auto;padding:0 14px 70px}
+header{background:var(--header);color:#fff;box-shadow:0 2px 0 var(--accent),var(--sh)}
+.hd{max-width:900px;margin:0 auto;padding:14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.ball{width:32px;height:32px;border-radius:50%;background:var(--accent);flex:none}
+.hd h1{font-size:23px;font-weight:700;line-height:1.05}
+.hd .sub{font-size:12.5px;color:#b9c8e8;text-transform:uppercase;letter-spacing:.05em}
+.live{margin-left:auto;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--accent);color:#22160c;padding:5px 10px;border-radius:999px}
+section{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);margin-top:16px;overflow:hidden}
+.sh{display:flex;align-items:baseline;gap:10px;padding:11px 14px;border-bottom:1px solid var(--line);background:var(--surface2)}
+.sh h2{font-size:17px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.sh .note{margin-left:auto;font-size:12px;color:var(--ink3);text-align:right}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:right;padding:9px 6px}
+th:nth-child(1),th:nth-child(2){text-align:left}
+td{padding:10px 6px;text-align:right;border-top:1px solid var(--line);font-size:16px}
+td:nth-child(1){width:28px;text-align:center;color:var(--ink3);font-weight:700}
+td:nth-child(2){text-align:left}
+tbody tr.q{background:color-mix(in srgb,var(--accent) 9%,transparent)}
+.tn{display:flex;align-items:center;gap:9px;font-weight:700}
+.sw{width:14px;height:14px;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.2)}
+.pt{font-family:"Barlow Condensed",sans-serif;font-size:21px;font-weight:700}
+.m{display:grid;grid-template-columns:34px 1fr auto 1fr;align-items:center;gap:8px;padding:9px 12px;border-top:1px solid var(--line)}
+.m:first-child{border-top:0}
+.m .n{font-size:11px;color:var(--ink3);font-weight:700}
+.m .a{display:flex;gap:7px;align-items:center;justify-content:flex-end;text-align:right}
+.m .b{display:flex;gap:7px;align-items:center}
+.m .nm{font-weight:600;font-size:15px}
+.m.done .nm.w{color:var(--good)}.m.done .nm:not(.w){color:var(--ink3)}
+.sc{display:flex;align-items:center;gap:6px}
+.sc b{font-family:"Barlow Condensed",sans-serif;font-size:20px;min-width:26px;text-align:center}
+.sc .vs{color:var(--ink3);font-size:13px}
+input,select,button,textarea{font-family:inherit;font-size:16px}
+input[type=text],input[type=number],select,textarea{border:1px solid var(--line);border-radius:9px;background:var(--ground);color:var(--ink);padding:9px 10px;width:100%}
+input.p{width:52px;height:44px;text-align:center;font-size:19px;font-weight:700;font-family:"Barlow Condensed",sans-serif;padding:0}
+button{font-weight:700;padding:11px 16px;border-radius:10px;border:1px solid var(--line);background:var(--surface2);color:var(--ink);cursor:pointer}
+button.go{background:var(--accent);border-color:var(--accent);color:#22160c}
+button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.pad{padding:14px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.grid{display:grid;gap:10px}
+label{font-size:12px;color:var(--ink3);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.pod{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:14px}
+.pd{border:1px solid var(--line);border-radius:var(--r);padding:12px;text-align:center;background:var(--surface2)}
+.pd .p{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);font-weight:700}
+.pd .n{font-family:"Barlow Condensed",sans-serif;font-size:22px;font-weight:700;margin-top:3px}
+.pd.oro{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 13%,var(--surface))}
+.msg{padding:14px;color:var(--ink2);font-size:15px}
+.hide{display:none!important}
+.sq{border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--surface2)}
+.sq .row{gap:8px}
+@media(max-width:560px){.m{grid-template-columns:26px 1fr auto 1fr;gap:5px}.m .nm{font-size:13.5px}.pod{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="hd"><div class="ball"></div><div><h1 id="tit">Torneo</h1><div class="sub" id="sub"></div></div><span class="live" id="livebadge">in diretta</span></div></header>
+<div class="wrap">
+  <section><div class="sh"><h2>Classifica</h2><span class="note" id="notacl"></span></div><table><thead><tr><th></th><th>Squadra</th><th>G</th><th>V</th><th>N</th><th>P</th><th>Fatti</th><th>Sub.</th><th>Punti</th></tr></thead><tbody id="cl"></tbody></table></section>
+  <section id="secpod" class="hide"><div class="sh"><h2>Podio</h2></div><div class="pod" id="pod"></div></section>
+  <section><div class="sh"><h2>Risultati</h2><span class="note" id="notaris"></span></div><div id="ris"></div></section>
+  <section id="secfin" class="hide"><div class="sh"><h2>Fase finale</h2></div><div id="fin"></div></section>
+  <section id="secrose" class="hide"><div class="sh"><h2>Squadre</h2></div><div class="pad grid" id="rose"></div></section>
+  <section id="secadmin"><div class="sh"><h2>Gestione</h2><span class="note">solo per lo staff</span></div>
+    <div class="pad" id="lock">
+      <div class="msg" style="padding:0 0 10px">Questa pagina si aggiorna da sola: i risultati arrivano dal campo mentre si gioca. Se sei dello staff, incolla qui la tua chiave per gestire il torneo — resta salvata solo su questo dispositivo.</div>
+      <div class="row"><input type="password" id="tok" placeholder="chiave staff (ghp_… o github_pat_…)" style="max-width:340px"><button id="bsblocca">Entra</button></div>
+      <div id="lockmsg" class="msg" style="padding:8px 0 0"></div>
+    </div>
+    <div id="adm" class="hide"></div>
+  </section>
+  <div class="msg" id="agg"></div>
+</div>
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const HOST=location.hostname.split('.')[0];
+const REPO=(location.pathname.split('/').filter(Boolean)[0])||'torneo';
+const RAW=`https://raw.githubusercontent.com/${HOST}/${REPO}/main/dati.json`;
+const API=`https://api.github.com/repos/${HOST}/${REPO}/contents/dati.json`;
+const VUOTO={titolo:"Torneo 3vs3",sottotitolo:"Pallacanestro Castelfranco 1952",ar:true,squadre:[],partite:[],finali:[],mvp:"",agg:""};
+let S=JSON.parse(JSON.stringify(VUOTO)), SHA=null, TOKEN=localStorage.getItem('tk_torneo')||'', admin=false, editing=false;
+const COL=i=>S.squadre[i]?S.squadre[i].c:'#888', NOM=i=>S.squadre[i]?S.squadre[i].n:'?';
+
+function classifica(){
+  const st=S.squadre.map((s,i)=>({i,g:0,v:0,n:0,p:0,pf:0,ps:0,pt:0}));
+  S.partite.forEach(m=>{ if(m.pa==null||m.pb==null)return; const A=st[m.a],B=st[m.b];
+    A.g++;B.g++;A.pf+=m.pa;A.ps+=m.pb;B.pf+=m.pb;B.ps+=m.pa;
+    if(m.pa>m.pb){A.v++;B.p++;A.pt+=2}else if(m.pb>m.pa){B.v++;A.p++;B.pt+=2}else{A.n++;B.n++;A.pt++;B.pt++}});
+  return st.sort((a,b)=>b.pt-a.pt||(b.pf-b.ps)-(a.pf-a.ps)||b.pf-a.pf||NOM(a.i).localeCompare(NOM(b.i)));
+}
+const fatte=()=>S.partite.filter(m=>m.pa!=null&&m.pb!=null).length;
+
+function render(){
+  $('#tit').textContent=S.titolo||'Torneo'; $('#sub').textContent=S.sottotitolo||'';
+  const ord=classifica(), tot=fatte();
+  $('#notacl').innerHTML=S.squadre.length?('2 punti a vittoria<br>'+tot+' partite su '+S.partite.length):'';
+  $('#cl').innerHTML=ord.map((r,i)=>`<tr class="${i<4&&tot>0&&S.squadre.length>4?'q':''}"><td>${i+1}</td><td><span class="tn"><span class="sw" style="background:${COL(r.i)}"></span>${NOM(r.i)}</span></td><td>${r.g}</td><td>${r.v}</td><td>${r.n}</td><td>${r.p}</td><td>${r.pf}</td><td>${r.ps}</td><td class="pt">${r.pt}</td></tr>`).join('')||'<tr><td colspan="9" style="text-align:center;color:var(--ink3);padding:18px">Il torneo non è ancora cominciato.</td></tr>';
+  const gio=S.partite.filter(m=>m.pa!=null&&m.pb!=null), pros=S.partite.filter(m=>m.pa==null||m.pb==null);
+  $('#notaris').innerHTML=S.partite.length?(pros.length?('prossima: turno '+pros[0].t):'girone concluso'):'';
+  const riga=m=>`<div class="m ${m.pa!=null&&m.pb!=null?'done':''}"><span class="n">T${m.t}${m.campo}</span><span class="a"><span class="nm ${m.pa>m.pb?'w':''}">${NOM(m.a)}</span><span class="sw" style="background:${COL(m.a)}"></span></span><span class="sc">${m.pa!=null&&m.pb!=null?`<b>${m.pa}</b><span class="vs">–</span><b>${m.pb}</b>`:'<span class="vs">— : —</span>'}</span><span class="b"><span class="sw" style="background:${COL(m.b)}"></span><span class="nm ${m.pb>m.pa?'w':''}">${NOM(m.b)}</span></span></div>`;
+  const ultimi=gio.slice(-8).reverse(), avanti=pros.slice(0,4);
+  $('#ris').innerHTML=(ultimi.length?ultimi.map(riga).join(''):'<div class="msg">Ancora nessun risultato.</div>')+(avanti.length?'<div class="sh" style="border-top:1px solid var(--line)"><h2 style="font-size:14px">Prossime</h2></div>'+avanti.map(riga).join(''):'');
+  if(S.finali&&S.finali.length){$('#secfin').classList.remove('hide');
+    $('#fin').innerHTML=S.finali.map(f=>`<div class="m ${f.pa!=null&&f.pb!=null?'done':''}"><span class="n">${f.lab}</span><span class="a"><span class="nm ${f.pa>f.pb?'w':''}">${f.a!=null?NOM(f.a):'—'}</span>${f.a!=null?`<span class="sw" style="background:${COL(f.a)}"></span>`:''}</span><span class="sc">${f.pa!=null&&f.pb!=null?`<b>${f.pa}</b><span class="vs">–</span><b>${f.pb}</b>`:'<span class="vs">— : —</span>'}</span><span class="b">${f.b!=null?`<span class="sw" style="background:${COL(f.b)}"></span>`:''}<span class="nm ${f.pb>f.pa?'w':''}">${f.b!=null?NOM(f.b):'—'}</span></span></div>`).join('');}
+  else $('#secfin').classList.add('hide');
+  const fin=(S.finali||[]).find(f=>f.k==='fin'), f34=(S.finali||[]).find(f=>f.k==='f34');
+  if(fin&&fin.pa!=null&&fin.pb!=null){$('#secpod').classList.remove('hide');
+    const o=fin.pa>fin.pb?fin.a:fin.b, a=fin.pa>fin.pb?fin.b:fin.a;
+    const b=(f34&&f34.pa!=null&&f34.pb!=null)?(f34.pa>f34.pb?f34.a:f34.b):null;
+    $('#pod').innerHTML=[['1° posto',o,'oro'],['2° posto',a,''],['3° posto',b,'']].map(([p,t,c])=>`<div class="pd ${c}"><div class="p">${p}</div><div class="n" ${t!=null?`style="color:${COL(t)}"`:''}>${t!=null?NOM(t):'—'}</div></div>`).join('')+(S.mvp?`<div class="pd" style="grid-column:1/-1"><div class="p">MVP del torneo</div><div class="n">⭐ ${S.mvp}</div></div>`:'');}
+  else $('#secpod').classList.add('hide');
+  if(S.squadre.some(s=>s.g&&s.g.length)){$('#secrose').classList.remove('hide');
+    $('#rose').innerHTML=S.squadre.map(s=>`<div class="sq"><div class="tn" style="margin-bottom:4px"><span class="sw" style="background:${s.c}"></span>${s.n}</div><div style="font-size:14.5px;color:var(--ink2)">${(s.g||[]).join(' · ')||'—'}</div></div>`).join('');}
+  else $('#secrose').classList.add('hide');
+  $('#agg').textContent=S.agg?('Ultimo aggiornamento dal campo: '+S.agg):'';
+  if(admin) renderAdmin();
+}
+
+function renderAdmin(){
+  const sq=S.squadre.map((s,i)=>`<div class="sq"><div class="row"><input type="text" value="${s.n}" data-sq="${i}" data-k="n" style="flex:1;min-width:120px"><input type="color" value="${s.c}" data-sq="${i}" data-k="c" style="width:52px;padding:2px"><button data-del="${i}">✕</button></div><textarea rows="2" placeholder="giocatori separati da virgola" data-sq="${i}" data-k="g" style="margin-top:6px">${(s.g||[]).join(', ')}</textarea></div>`).join('');
+  const part=S.partite.map((m,i)=>`<div class="m"><span class="n">T${m.t}${m.campo}</span><span class="a"><span class="nm">${NOM(m.a)}</span><span class="sw" style="background:${COL(m.a)}"></span></span><span class="sc"><input class="p" inputmode="numeric" data-p="${i}" data-w="a" value="${m.pa??''}"><span class="vs">–</span><input class="p" inputmode="numeric" data-p="${i}" data-w="b" value="${m.pb??''}"></span><span class="b"><span class="sw" style="background:${COL(m.b)}"></span><span class="nm">${NOM(m.b)}</span></span></div>`).join('');
+  const fin=(S.finali||[]).map((f,i)=>`<div class="m"><span class="n">${f.lab}</span><span class="a"><span class="nm">${f.a!=null?NOM(f.a):'—'}</span></span><span class="sc"><input class="p" inputmode="numeric" data-f="${i}" data-w="a" value="${f.pa??''}"><span class="vs">–</span><input class="p" inputmode="numeric" data-f="${i}" data-w="b" value="${f.pb??''}"></span><span class="b"><span class="nm">${f.b!=null?NOM(f.b):'—'}</span></span></div>`).join('');
+  $('#adm').innerHTML=`<div class="pad grid">
+    <div><label>Titolo</label><input type="text" id="ctit" value="${S.titolo||''}"></div>
+    <div><label>Sottotitolo</label><input type="text" id="csub" value="${S.sottotitolo||''}"></div>
+    <div><label>Squadre (${S.squadre.length})</label><div class="grid" style="margin-top:6px">${sq}</div></div>
+    <div class="row"><button id="badd">+ Aggiungi squadra</button>
+      <label style="text-transform:none;letter-spacing:0;display:flex;gap:6px;align-items:center"><input type="checkbox" id="car" ${S.ar?'checked':''} style="width:auto"> andata e ritorno</label>
+      <button id="bgen">Genera calendario</button></div>
+    <div class="msg" style="padding:0">Generare il calendario azzera i risultati inseriti.</div></div>
+  ${S.partite.length?`<div class="sh"><h2 style="font-size:15px">Risultati girone</h2></div>${part}`:''}
+  ${(S.finali||[]).length?`<div class="sh"><h2 style="font-size:15px">Fase finale</h2></div>${fin}`:''}
+  <div class="pad grid">
+    <div class="row"><button id="bfin">Genera semifinali e finale</button><input type="text" id="cmvp" placeholder="MVP del torneo" value="${S.mvp||''}" style="flex:1;min-width:160px"></div>
+    <div class="row"><button id="bsalva" class="go">SALVA E MANDA IN DIRETTA</button><span id="st2" style="color:var(--ink3);font-size:14px"></span></div>
+    <div class="row"><button id="besci">Esci dalla gestione</button></div>
+  </div>`;
+  $('#badd').onclick=()=>{const c=['#e8722b','#2c5fc4','#c99700','#333b49','#c8102e','#1f7a4d','#7b3fa0','#00897b'];S.squadre.push({n:'SQUADRA '+(S.squadre.length+1),c:c[S.squadre.length%8],g:[]});editing=true;render()};
+  $$('[data-del]').forEach(b=>b.onclick=()=>{S.squadre.splice(+b.dataset.del,1);S.partite=[];S.finali=[];editing=true;render()});
+  $$('[data-sq]').forEach(el=>el.oninput=()=>{const i=+el.dataset.sq,k=el.dataset.k;editing=true;
+    if(k==='g')S.squadre[i].g=el.value.split(',').map(x=>x.trim()).filter(Boolean); else S.squadre[i][k]=el.value;});
+  $$('[data-p]').forEach(el=>el.oninput=()=>{const m=S.partite[+el.dataset.p];const v=el.value.replace(/[^0-9]/g,'');el.value=v;m[el.dataset.w==='a'?'pa':'pb']=v===''?null:+v;editing=true});
+  $$('[data-f]').forEach(el=>el.oninput=()=>{const f=S.finali[+el.dataset.f];const v=el.value.replace(/[^0-9]/g,'');el.value=v;f[el.dataset.w==='a'?'pa':'pb']=v===''?null:+v;editing=true});
+  $('#car').onchange=e=>{S.ar=e.target.checked;editing=true};
+  $('#bgen').onclick=()=>{genera();render()};
+  $('#bfin').onclick=()=>{genFinali();render()};
+  $('#bsalva').onclick=salva;
+  $('#besci').onclick=()=>{admin=false;editing=false;$('#adm').classList.add('hide');$('#lock').classList.remove('hide');render()};
+}
+
+function genera(){
+  const n=S.squadre.length; if(n<2){alert('Servono almeno due squadre.');return}
+  let idx=[...Array(n).keys()]; if(n%2)idx.push(null);
+  const m=idx.length, giornate=[];
+  for(let r=0;r<m-1;r++){const g=[];
+    for(let i=0;i<m/2;i++){const a=idx[i],b=idx[m-1-i]; if(a!=null&&b!=null)g.push(r%2?[b,a]:[a,b]);}
+    giornate.push(g); idx=[idx[0],...idx.slice(-1),...idx.slice(1,-1)];}
+  let tutte=[]; giornate.forEach(g=>tutte.push(...g));
+  if(S.ar) tutte=tutte.concat(giornate.map(g=>g.map(([a,b])=>[b,a])).flat());
+  const part=[]; let t=1,c=0;
+  tutte.forEach(([a,b])=>{part.push({t,campo:c?'B':'A',a,b,pa:null,pb:null}); c=1-c; if(!c)t++;});
+  S.partite=part; S.finali=[]; editing=true;
+}
+function genFinali(){
+  const o=classifica(); if(o.length<4){alert('Servono almeno quattro squadre.');return}
+  S.finali=[{k:'sf1',lab:'SF 1ª-4ª',a:o[0].i,b:o[3].i,pa:null,pb:null},
+            {k:'sf2',lab:'SF 2ª-3ª',a:o[1].i,b:o[2].i,pa:null,pb:null},
+            {k:'f34',lab:'3°/4°',a:null,b:null,pa:null,pb:null},
+            {k:'fin',lab:'FINALE',a:null,b:null,pa:null,pb:null}];
+  editing=true;
+}
+function collegaFinali(){
+  const g=k=>(S.finali||[]).find(f=>f.k===k);
+  const s1=g('sf1'),s2=g('sf2'),f34=g('f34'),fin=g('fin');
+  const W=f=>f&&f.pa!=null&&f.pb!=null&&f.pa!==f.pb?(f.pa>f.pb?f.a:f.b):null;
+  const L=f=>f&&f.pa!=null&&f.pb!=null&&f.pa!==f.pb?(f.pa>f.pb?f.b:f.a):null;
+  if(fin){fin.a=W(s1);fin.b=W(s2)} if(f34){f34.a=L(s1);f34.b=L(s2)}
+}
+
+function b64(str){const b=new TextEncoder().encode(str);let s='';for(let i=0;i<b.length;i+=8192)s+=String.fromCharCode.apply(null,b.subarray(i,i+8192));return btoa(s)}
+
+async function carica(primo){
+  if(editing) return;
+  try{
+    const r=await fetch(RAW+'?t='+Date.now(),{cache:'no-store'});
+    if(!r.ok) throw 0;
+    const d=await r.json();
+    S=Object.assign(JSON.parse(JSON.stringify(VUOTO)),d);
+    render();
+  }catch(e){ if(primo) render(); }
+}
+
+async function salva(){
+  const st=$('#st2'); st.textContent='Salvo…';
+  S.titolo=$('#ctit').value; S.sottotitolo=$('#csub').value; S.mvp=$('#cmvp').value;
+  collegaFinali();
+  const d=new Date(); S.agg=String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
+  const json=JSON.stringify(S,null,1);
+  try{
+    let sha=null;
+    const g=await fetch(API+'?t='+Date.now(),{headers:{Authorization:'Bearer '+TOKEN,Accept:'application/vnd.github+json'},cache:'no-store'});
+    if(g.ok){ sha=(await g.json()).sha; }
+    const p=await fetch(API,{method:'PUT',headers:{Authorization:'Bearer '+TOKEN,Accept:'application/vnd.github+json','Content-Type':'application/json'},
+      body:JSON.stringify({message:'risultati '+S.agg,content:b64(json),sha:sha||undefined})});
+    if(!p.ok){ const t=await p.text(); throw new Error(p.status+' '+t.slice(0,140)); }
+    editing=false; st.textContent='In diretta ✓ — i genitori lo vedono entro pochi secondi';
+    setTimeout(()=>{st.textContent=''},6000);
+  }catch(e){ st.textContent='Non sono riuscito a salvare: '+(e.message||e); }
+}
+
+$('#bsblocca').onclick=async()=>{
+  const t=$('#tok').value.trim(); if(!t){return}
+  $('#lockmsg').textContent='Verifico la chiave…';
+  try{
+    const r=await fetch(API+'?t='+Date.now(),{headers:{Authorization:'Bearer '+t,Accept:'application/vnd.github+json'},cache:'no-store'});
+    if(r.status===401||r.status===403){ $('#lockmsg').textContent='Chiave non valida o senza permessi su questo archivio.'; return; }
+    TOKEN=t; localStorage.setItem('tk_torneo',t); admin=true;
+    $('#lock').classList.add('hide'); $('#adm').classList.remove('hide'); $('#lockmsg').textContent=''; render();
+  }catch(e){ $('#lockmsg').textContent='Non riesco a contattare GitHub: '+(e.message||e); }
+};
+$('#tok').addEventListener('keydown',e=>{if(e.key==='Enter')$('#bsblocca').click()});
+if(TOKEN){ $('#tok').value=TOKEN; }
+window.addEventListener('beforeunload',e=>{if(editing){e.preventDefault();e.returnValue=''}});
+render(); carica(true); setInterval(()=>carica(false),15000);
+</script>
+</body>
+</html>
