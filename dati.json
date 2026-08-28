@@ -1,9 +1,249 @@
 {
  "titolo": "Torneo 3vs3 · Castelfranco",
- "sottotitolo": "venerdì 28 agosto 2026 · palestra IPSIA · 17:30–20:30",
- "ar": true,
- "squadre": [],
- "partite": [],
+ "sottotitolo": "venerdì 28 agosto 2026 · palestra IPSIA · 7 squadre · girone unico",
+ "ar": false,
+ "squadre": [
+  {
+   "n": "ROSSI",
+   "c": "#c8102e",
+   "g": [
+    "Lorenzo Pavanello",
+    "Gianantonio Vascellari",
+    "Mattia Cocco",
+    "Sebastiano Campagnolo"
+   ]
+  },
+  {
+   "n": "BLU",
+   "c": "#2c5fc4",
+   "g": [
+    "Yassir Songne",
+    "Andrea Guidolin",
+    "Edoardo Vitali",
+    "Asia Rzine"
+   ]
+  },
+  {
+   "n": "GIALLI",
+   "c": "#c99700",
+   "g": [
+    "Giovanni Festa",
+    "Christian Zarnescu",
+    "Alberto Trevisan",
+    "Giorgia Santoro"
+   ]
+  },
+  {
+   "n": "VERDI",
+   "c": "#1f7a4d",
+   "g": [
+    "Riccardo Guidolin",
+    "Alessandro Bertolo",
+    "Alessia Baldin",
+    "Sofia Rzine"
+   ]
+  },
+  {
+   "n": "NERI",
+   "c": "#333b49",
+   "g": [
+    "Nicola Azzalini",
+    "Alessandro Ongarato",
+    "Riccardo Calore",
+    "Lorenzo Costa"
+   ]
+  },
+  {
+   "n": "ARANCIO",
+   "c": "#e8722b",
+   "g": [
+    "Vittorio Dal Bello",
+    "Filippo Cavalli",
+    "Pietro Fior",
+    "Filippo Ongarello"
+   ]
+  },
+  {
+   "n": "BIANCHI",
+   "c": "#7d8894",
+   "g": [
+    "Arti Qoshja",
+    "Alessio Montagner",
+    "Alberto Andretta",
+    "John Obuo"
+   ]
+  }
+ ],
+ "partite": [
+  {
+   "t": 1,
+   "campo": "A",
+   "a": 2,
+   "b": 4,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 1,
+   "campo": "B",
+   "a": 0,
+   "b": 5,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 2,
+   "campo": "A",
+   "a": 1,
+   "b": 2,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 2,
+   "campo": "B",
+   "a": 0,
+   "b": 6,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 3,
+   "campo": "A",
+   "a": 0,
+   "b": 3,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 3,
+   "campo": "B",
+   "a": 1,
+   "b": 5,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 4,
+   "campo": "A",
+   "a": 2,
+   "b": 3,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 4,
+   "campo": "B",
+   "a": 4,
+   "b": 5,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 5,
+   "campo": "A",
+   "a": 0,
+   "b": 4,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 5,
+   "campo": "B",
+   "a": 1,
+   "b": 6,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 6,
+   "campo": "A",
+   "a": 3,
+   "b": 4,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 6,
+   "campo": "B",
+   "a": 2,
+   "b": 5,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 7,
+   "campo": "A",
+   "a": 3,
+   "b": 6,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 7,
+   "campo": "B",
+   "a": 1,
+   "b": 4,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 8,
+   "campo": "A",
+   "a": 5,
+   "b": 6,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 8,
+   "campo": "B",
+   "a": 0,
+   "b": 2,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 9,
+   "campo": "A",
+   "a": 3,
+   "b": 5,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 9,
+   "campo": "B",
+   "a": 4,
+   "b": 6,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 10,
+   "campo": "A",
+   "a": 0,
+   "b": 1,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 10,
+   "campo": "B",
+   "a": 2,
+   "b": 6,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "t": 11,
+   "campo": "A",
+   "a": 1,
+   "b": 3,
+   "pa": null,
+   "pb": null
+  }
+ ],
  "finali": [],
  "mvp": "",
  "agg": ""
