@@ -244,7 +244,40 @@
    "pb": 4
   }
  ],
- "finali": [],
+ "finali": [
+  {
+   "k": "sf1",
+   "lab": "SF 1ª-4ª",
+   "a": 2,
+   "b": 6,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "k": "sf2",
+   "lab": "SF 2ª-3ª",
+   "a": 0,
+   "b": 5,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "k": "f34",
+   "lab": "3°/4°",
+   "a": null,
+   "b": null,
+   "pa": null,
+   "pb": null
+  },
+  {
+   "k": "fin",
+   "lab": "FINALE",
+   "a": null,
+   "b": null,
+   "pa": null,
+   "pb": null
+  }
+ ],
  "mvp": "",
- "agg": "19:34"
+ "agg": "19:39"
 }
